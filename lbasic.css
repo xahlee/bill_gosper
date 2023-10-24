@@ -1,0 +1,999 @@
+@charset "utf-8";
+
+/*
+2022-03-24
+2023-10-17
+*/
+
+body {
+font-family: Arial, sans-serif;
+margin-top:41px;
+margin-bottom:50px;
+}
+
+mark.unicodeXL, mark.emojiXL {
+color:black;
+background-color:transparent;
+}
+
+.unicodeXL {
+/* font-family: "Segoe UI Symbol", "Apple Symbols", "Noto Sans Symbols 2"; */
+font-size:36px;
+}
+
+.emojiXL {
+font-family:"Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
+font-size:36px;
+}
+
+nav.lpanelXL {
+width:200px;
+margin-top:10px;
+padding-bottom:40px;
+padding-left:4px;
+}
+
+nav.pchap {
+border-left:solid 2px darkred;
+}
+nav.psec {
+border-left:solid 2px silver;
+padding-left:5px;
+}
+
+nav ul, nav ol {
+margin-left:-16px;
+}
+
+nav li {
+margin-left:-16px;
+list-style-type:none;
+border-top:solid thin grey;
+}
+
+nav li > a {
+display:inline-block;
+vertical-align:top;
+}
+
+nav .unicodeXL,
+nav .emojiXL {
+font-size:20px;
+}
+
+nav.navBackXL {
+position:fixed;
+top:2px;
+left:2px;
+z-index:2;
+}
+
+nav.navBackXL > a {
+display:inline-block;
+margin:0;
+padding:4px;
+border:solid 2px darkred;
+border-radius:16px;
+background-color:darkred;
+color:white;
+}
+
+nav.navBackXL > a:before {
+content:"🔺 Back to ";
+}
+
+nav.navPrevNextXL {
+display:inline-block;
+position:fixed;
+bottom:5px;
+left:5px;
+z-index:780;
+}
+
+nav.navPrevNextXL a {
+word-spacing:10px;
+font-size:55px;
+}
+
+@media all and (min-width:801px) {
+ main {
+margin-left:215px;
+}
+
+ footer {
+margin-left:215px;
+}
+
+ .lpanelXL {
+position:absolute;
+top:41px;
+left:2px;
+}
+
+}
+
+@media (prefers-color-scheme:dark) {
+ body {
+color:white;
+background-color:black;
+}
+
+ mark.unicodeXL, mark.emojiXL {
+color:white;
+background-color:transparent;
+}
+
+ a:visited,a:link {
+color:dodgerblue;
+}
+
+}
+
+ul.flowxl {
+display: flex;
+flex-wrap: wrap;
+padding:0;
+}
+
+ul.flowxl > li
+{
+list-style-type: none;
+text-align:center;
+max-width:250px;
+padding:1px;
+border:solid 1px seashell;
+border-radius:5px;
+}
+
+ul.flowxl > li > a {
+display:inline-block;
+}
+
+ul.flowxl a > img {
+border-radius:5px;
+}
+
+ul.flowxl a > img[src$="svg"] {
+width:160px;
+}
+
+div.topicXL {
+margin:16px 6px;
+padding:4px;
+max-width:50ch;
+outline:solid 2px grey;
+border-radius:8px;
+}
+
+div.topicXL > ul {
+margin-left:-16px;
+}
+
+div.topicXL > ul > li {
+margin-left:-16px;
+list-style-type:none;
+border-top:solid thin grey;
+}
+
+div.topicXL > ul > li > a {
+display:inline-block;
+}
+
+div.topicXL > ul > li > a > img {
+max-width:250px;
+}
+
+div.rltd {
+display:inline-block;
+padding:4px;
+margin:16px 6px;
+border:solid 2px grey;
+border-radius:8px;
+}
+
+div.rltd:before {
+content:"See also: ";
+position:relative;
+left:8px;
+}
+
+table {
+overflow:auto;
+}
+
+p, a, li, figcaption, div, span {
+overflow-wrap:anywhere;
+}
+
+dl {
+border-left:solid 2px silver;
+padding:8px;
+}
+
+dt {
+border-top:solid thin silver;
+padding-top:5px;
+}
+
+dd {
+margin-bottom:16px;
+line-height:1.6;
+}
+
+dd > ul {
+padding-left:8px;
+}
+
+ul {
+margin: 1.5rem 0px;
+}
+
+li {
+margin:4px;
+line-height:1.6;
+}
+
+p {
+line-height:1.6;
+}
+
+img {
+max-width:100%;
+height:auto;
+margin:1px;
+margin-top:3px;
+}
+
+audio {
+width:100%;
+border-radius:16px;
+}
+
+video {
+max-width:100%;
+max-height:90vh;
+}
+
+iframe[src*="www.youtube.com/"] {
+max-width:100%;
+max-height:95vh;
+}
+
+figure {
+padding:0;
+margin:20px 0;
+}
+
+figure > img, figure > div {
+box-shadow:3px 3px 8px 4px silver;
+}
+
+figcaption {
+line-height:1.6;
+}
+
+blockquote {
+border-left:solid 2px grey;
+padding-left:8px;
+margin-left:16px;
+}
+
+section {
+padding:6px;
+margin:16px 6px;
+border:solid 1px silver;
+}
+
+cite {
+font-weight:bold;
+color:red;
+}
+
+footer {
+text-align:center;
+margin-bottom:80px;
+}
+
+footer a {
+display:inline-block;
+}
+
+input {
+margin: 10px;
+}
+
+div > a {
+display:inline-block;
+}
+
+a {
+font-size:20px;
+text-decoration:none;
+}
+
+a:hover {
+background-color:pink;
+}
+
+a[href*="wikipedia.org/wiki/"]:after {
+font-size:small;
+content:" [Wikipedia]";
+}
+
+a[href*="/emacs_manual/"] {
+white-space:nowrap;
+padding:5px;
+border:dotted 2px grey;
+}
+
+a[href$=".mp3"] {
+border:solid thin silver;
+}
+
+a[href$=".mp3"]:before {
+content:"mp3 ";
+}
+
+a[href$=".mpg"]:before, a[href$=".mov"]:before {
+content:"📺 ";
+font-size:1.4rem;
+}
+
+kbd {
+font-family:Consolas, Menlo, monospace;
+font-size:18px;
+padding:0 4px 0 4px;
+border:solid 1px grey;
+border-radius:4px;
+white-space:nowrap;
+color:white;
+background-color:black;
+box-shadow:2px 2px 2px 1px silver;
+}
+
+kbd > kbd {
+border:none;
+box-shadow:none;
+}
+
+var {
+font-family:Consolas, Menlo, monospace;
+font-size:18px;
+}
+
+var:before {
+content:"‹";
+}
+
+var:after {
+content:"›";
+}
+
+var.elisp {
+font-weight:bold;
+color:#a0522d;
+}
+
+var.elisp:before {
+content:"";
+}
+
+var.elisp:after {
+content:"";
+}
+
+var.d {
+color:green;
+}
+
+code {
+font-family:Consolas, Menlo, monospace;
+white-space:pre-wrap;
+color:hsl(0,100%,40%);
+}
+
+code.path_xl {
+color:green;
+}
+
+code.elisp_f {
+font-weight:bold;
+color:red;
+background-color:transparent;
+}
+
+pre {
+font-family:Consolas, Menlo, monospace;
+line-height:1.5;
+tab-size:2;
+padding:8px;
+margin:8px 2px;
+white-space:pre-wrap;
+border:solid thin grey;
+border-left:solid 5px grey;
+border-radius:8px;
+}
+
+pre:before {
+content:"";
+position:relative;
+top:-8px;
+right:0;
+float:right;
+text-shadow:2px 2px 2px grey;
+}
+
+a.bigImg:before {
+content:"(⧉ Big Image ";
+}
+
+a.bigImg:after {
+content:")";
+}
+
+span.xsignet {
+font-family:Arial, sans-serif;
+font-size:3rem;
+color:red;
+}
+
+span.xsignetxah {
+font-family:Arial, sans-serif;
+font-size:2rem;
+color:red;
+}
+
+div.date_xl {
+display:block;
+margin-top:4px;
+border-top: solid 1px grey;
+}
+
+table.nrm {
+border-collapse:collapse;
+margin:16px;
+}
+
+table.nrm > caption {
+padding:5px;
+font-weight:bold;
+}
+
+table.nrm th, table.nrm td {
+padding:4px;
+border:solid thin grey;
+line-height:1.6;
+}
+
+table.nrm th {
+border: solid 3px grey;
+}
+
+b.w {
+color:red;
+}
+
+mark.b {
+background-color:cyan;
+}
+
+a.amz, a.amz_search {
+font-size:25px;
+padding:2px;
+background-color:#ffc125;
+border-radius:8px;
+white-space:pre;
+}
+
+a.amz_search:before {
+content:"🔍Buy ";
+}
+
+span.ref {
+white-space:nowrap;
+padding:5px;
+border:dotted 2px grey;
+}
+
+span.ref:before {
+content:"REF ";
+font-weight:bold;
+}
+
+pre.text {
+padding:8px;
+margin:8px;
+border:solid thin silver;
+}
+
+pre.WolframLang {
+border-color:red;
+}
+
+pre.WolframLang:before {
+content:"WolframLang";
+}
+
+pre.ahk:before {
+content:"AutoHotkey";
+}
+
+pre.bash {
+border-color:darkgrey;
+}
+
+pre.bash:before {
+content:"bash";
+}
+
+pre.clojure:before {
+content:"Clojure";
+}
+
+pre.cmd {
+border-color:dodgerblue;
+}
+
+pre.cmd:before {
+content:"cmd.exe";
+}
+
+pre.code {
+border-color:grey}
+
+pre.code:before {
+content:"code";
+}
+
+pre.common-lisp:before {
+content:"Common Lisp";
+}
+
+pre.csharp:before {
+content:"C Sharp";
+}
+
+pre.css {
+border-color:hsl(183,16%,60%);
+}
+
+pre.css:before {
+content:"CSS";
+}
+
+pre.emacs-lisp {
+border-color:darkred;
+}
+
+pre.emacs-lisp:before {
+content:"emacs lisp";
+}
+
+pre.error:before {
+content:"Error";
+}
+
+pre.golang {
+border-color:hsl(159,40%,60%);
+}
+
+pre.golang:before {
+content:"golang";
+}
+
+pre.haskell:before {
+content:"Haskell";
+}
+
+pre.html {
+border-color:hsl(244,61%,60%);
+}
+
+pre.html:before {
+content:"HTML";
+}
+
+pre.java {
+border-color:hsl(0,100%,45%);
+}
+
+pre.java:before {
+content:"Java";
+}
+
+pre.js {
+border-color:gold;
+}
+
+pre.js:before {
+content:"JavaScript";
+}
+
+pre.math {
+border-color:hsl(134,17%,60%);
+}
+
+pre.mysql:before {
+content:"mysql";
+}
+
+pre.nodejs {
+border-color:hsl(240,87%,60%);
+}
+
+pre.nodejs:before {
+content:"node.js";
+}
+
+pre.ocaml:before {
+content:"OCaml";
+}
+
+pre.org-mode {
+border-color:hsl(158,27%,60%);
+}
+
+pre.output {
+border-color:grey}
+
+pre.output:before {
+content:"output";
+}
+
+pre.perl {
+border-color:hsl(36,39%,60%);
+}
+
+pre.perl:before {
+content:"Perl";
+}
+
+pre.php {
+border-color:hsl(240,50%,60%);
+}
+
+pre.php:before {
+content:"PHP";
+}
+
+pre.povray:before {
+content:"POV-Ray";
+}
+
+pre.powershell {
+border-color:hsl(211,67%,45%);
+}
+
+pre.powershell:before {
+content:"PowerShell";
+}
+
+pre.python {
+border-color:hsl(207,44%,49%);
+}
+
+pre.python:before {
+content:"Python 3";
+}
+
+pre.python2 {
+border-color:hsl(54,66%,60%);
+}
+
+pre.python2:before {
+content:"Python 2";
+}
+
+pre.python3 {
+border-color:hsl(207,44%,49%);
+}
+
+pre.python3:before {
+content:"Python 3";
+}
+
+pre.qi:before {
+content:"Qi";
+}
+
+pre.ruby {
+border-color:hsl(0,100%,48%);
+}
+
+pre.ruby:before {
+content:"Ruby";
+}
+
+pre.shell {
+border-color:hsl(157,42%,70%);
+}
+
+pre.shell:before {
+content:"shell";
+}
+
+pre.typescript:before {
+content:"TypeScript";
+}
+
+pre.xml span.sgml-namespace {
+color:hsl(61,19%,60%);
+}
+
+pre.xml:before {
+content:"XML";
+}
+
+.shadow {
+color:dodgerblue;
+}
+
+.bold {
+font-weight:bold;
+}
+
+.builtin {
+color:slateblue;
+}
+
+.comment {
+color:firebrick;
+}
+
+.comment-delimiter {
+color:firebrick;
+}
+
+.constant {
+color:#008b8b;
+}
+
+.doc {
+color:#8b2252;
+}
+
+.function-name, .xah-js-func-name {
+color:dodgerblue;
+}
+
+.keyword {
+color:#a020f0;
+}
+
+.preprocessor {
+color:hsl(314,19%,50%);
+}
+
+.string {
+color:#8b2252;
+}
+
+.type {
+color:#228b22;
+}
+
+.underline {
+text-decoration:underline;
+}
+
+.variable-name, .xah-js-user-var {
+font-weight:bold;
+}
+
+.warning {
+color:#ff0000;
+font-weight:bold;
+}
+
+span.xah-css-id-selector {
+color:darkred;
+}
+
+.xahk-mode-command-name {
+color:dodgerblue;
+}
+
+pre .xah-elisp-command {
+color:#228b22;
+}
+
+pre .xah-elisp-dollar-symbol {
+font-weight:bold;
+}
+
+pre .xah-elisp-at-symbol {
+font-weight:bold;
+color:#ff0000;
+}
+
+pre .xah-elisp-cap-variable {
+font-weight:bold;
+color:firebrick;
+}
+
+.perl-non-scalar-variable {
+font-weight:bold;
+}
+
+.elisp-prefix-command, .elisp-command, .elisp-macro, .elisp-special-form, .elisp-function {
+white-space:nowrap;
+font-weight:bold;
+color:firebrick;
+background-color:transparent;
+}
+
+.elisp-constant, .elisp-user-option, .elisp-variable {
+white-space:nowrap;
+font-weight:bold;
+color:#a0522d;
+}
+
+div > a > img {
+max-width:240px;
+height:auto;
+}
+
+span.xnt {
+color:dodgerblue;
+font-weight:bold;
+}
+
+b.x3nt {
+font-weight:bold;
+}
+
+b.x3nt:after {
+content:" ➤ ";
+}
+
+div.xnote {
+display:table;
+line-height:1.6;
+padding:5px;
+margin:5px;
+border:solid 2px cyan;
+border-radius:8px;
+}
+
+span.oafm {
+color:darkred;
+background-color:silver;
+}
+
+span.oafm:after {
+content:"‡";
+}
+
+div.anote {
+line-height:1.6;
+padding:8px;
+margin:8px;
+border:solid thin grey;
+}
+
+div.anote > p {
+padding:8px;
+margin:8px;
+width:60ex;
+}
+
+/* .poem_xl { */
+/* width:fit-content; */
+/* line-height:1.6; */
+/* padding:8px; */
+/* margin:8px; */
+/* border:solid 2px grey; */
+/* border-radius:8px; */
+/* } */
+
+/* .lyrics_xl { */
+/* display:inline-block; */
+/* font-family:sans-serif; */
+/* line-height:1.6; */
+/* white-space:pre-wrap; */
+/* padding:5px; */
+/* border:solid 4px silver; */
+/* border-radius:10px; */
+/* } */
+
+.poem_xl , .lyrics_xl {
+display:inline-block;
+width:fit-content;
+font-family: Arial, sans-serif;
+line-height:1.6;
+white-space:pre-wrap;
+padding:8px;
+margin:8px;
+border:solid 2px pink;
+border-radius:1rem;
+}
+
+.lyrics_xl {
+border:solid 4px silver;
+}
+
+.big {
+font-size:24px;
+}
+
+section.word88 {
+border:none;
+margin-top:8px;
+line-height:1.6;
+}
+
+section.word88 > h3.wd {
+margin:2px;
+}
+
+section.word88 > div.ex {
+padding:4px;
+border:solid thin grey;
+}
+
+section.word88 > div.ex > div.bdy {
+line-height:1.6;
+}
+
+section.word88 > div.ex > div.bdy > p {
+margin:4px;
+}
+
+section.word88 > div.ex > div.src {
+margin-top:4px;
+color:grey;
+}
+
+section.word88 > div.ex > div.src:before {
+content:"Source:";
+}
+
+section.word88 div.cmt {
+margin-top:8px;
+}
+
+section.word88 div.cmt:before {
+font-weight:bold;
+content:"Notes:";
+}
+
+section.word88 > div.def:before, section.word88 > div.ex > div.def:before {
+content:"• ";
+}
+
+section.word88 > div.def {
+margin:8px;
+}
+
+[lang="zh"] {
+font-size:18px;
+}
+
+.zhChar {
+font-size:32px;
+}
+
+.todo {
+border-bottom:solid thin red;
+}
+
+.payme88711 {
+display:inline-block;
+border:solid thin grey;
+border-radius:16px;
+}
+
+a.ggb:before {
+content:"🔺Geogebra ";
+}
+
+a[href$=".gsp"]:before {
+content:"⬛GSP "}
+
+.xtop > a {
+position:fixed;
+top:200px;
+right:2px;
+z-index:322;
+font-size:40px;
+}
